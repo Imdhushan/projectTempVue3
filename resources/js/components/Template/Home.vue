@@ -4,21 +4,31 @@
 
     <div class="row g-3 mb-3 mt-4">
       <div class="col-md-12 col-sm-12 col-lg-12 ">
-      <div class="card bg-dark text-white overflow-hidden light" style="max-width: 100rem; max-height: 20rem;">
-        <div class="card-img-top"><img class="img-fluid" src="/assets/img/generic/3.jpg" alt="Card image" /></div>
+      <div class="card bg-dark text-white overflow-hidden light" style="max-width: 100rem; max-height: 25rem;">
+        <div class="card-img-top">
+<!--          <img class="img-fluid" src="/assets/img/generic/3.jpg" alt="Card image" />-->
+<!--          <video class="img-fluid" controls autoplay loop>-->
+          <video class="img-fluid" autoplay muted loop>
+            <source src="/assets/video/blue_water.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div class="card-img-overlay d-flex align-items-end">
           <div>
-            <h5 class="card-title text-white">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title text-white">Blue Investment</h5>
+            <p class="card-text">Ready to make waves with your next investment?</p>
           </div>
         </div>
       </div>
       </div>
     </div>
 
-    <div class="row g-3 mb-3">
-      <div class="col-md-12 col-sm-12 col-lg-6 col-xxl-3" v-for="(card, index) in cardIconStatData"
-        :key="index">
+    <div class="row g-3 mb-3 d-flex align-items-stretch">
+      <div
+          :class="{'col-md-12 col-sm-12 col-lg-6 col-xxl-3': !card.fullWidth,'col-12': card.fullWidth}"
+          v-for="(card, index) in cardIconStatData"
+          :key="index"
+      >
 
         <CardIconStat
             :title="card.title"
@@ -29,14 +39,12 @@
             :imageIndex="card.imageIndex"
             :textClass="card.textClass"
             :iconColor="card.colorCode"
+            class="h-100"
         />
       </div>
     </div>
 
   </div>
-
-
-
 
 </template>
 
@@ -86,10 +94,16 @@ const cardIconStatData = ref([
     imageIndex: 2,
     textClass: 'text-warning'
   },
-
-  
-
-
+  {
+    title: 'Sustainable Industries & Innovations',
+    badgeText: 'Special Card',
+    icon: 'fas fa-star fs-5',
+    colorCode: '#FFEB3B',
+    href: '#',
+    imageIndex: 2,
+    textClass: 'text-info',
+    fullWidth: true,
+  },
 
 
 ]);
@@ -97,3 +111,22 @@ const cardIconStatData = ref([
 
 
 </script>
+<style>
+.video-container {
+  position: relative;
+  width: 120%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Ensures the video covers the entire area without distortion */
+}
+
+</style>

@@ -33,6 +33,9 @@ Route::get('/', function () {
 Route::get('/tourismsector/{any}', function () {
     return view('welcome');
 });
+Route::get('/data_analysis/{any}', function () {
+    return view('welcome');
+});
 
 Route::get('/dashboard/{any}', function () {
     return view('welcome');

@@ -1,9 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/login.js": "/js/login.js",
-    "/js/pdfmake.js": "/js/pdfmake.js",
-    "/js/canvg.js": "/js/canvg.js",
-    "/js/xlsx.js": "/js/xlsx.js",
     "/css/app.css": "/css/app.css",
     "/css/theme.css": "/css/theme.css",
     "/dist/fonts/materialdesignicons-webfont.eot": "/dist/fonts/materialdesignicons-webfont.eot",

@@ -23,6 +23,7 @@ import CardFooter from './components/bootstrap/CardFooter.vue';
 import CardGroup from './components/bootstrap/CardGroup.vue';
 import CardImgOverlay from './components/bootstrap/CardImgOverlay.vue';
 import CardExpandToggler from './components/bootstrap/CardExpandToggler.vue';
+import TreeView from './components/bootstrap/TreeView.vue';
 
 const emitter = mitt();
 const app = createApp(App);
@@ -34,6 +35,7 @@ app.component('CardFooter', CardFooter);
 app.component('CardGroup', CardGroup);
 app.component('CardImgOverlay', CardImgOverlay);
 app.component('CardExpandToggler', CardExpandToggler);
+app.component('TreeView', TreeView);
 
 app.use(router);
 app.use(Vue3ProgressPlugin);

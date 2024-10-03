@@ -59,6 +59,7 @@
         @yield('content')
         <script src="{{asset('/js/app.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGjZu3K7GAMw6FiUWaPZ3GjdxRHVdQYJ8&callback=initMap"></script>
         <script>
             feather.replace()
         </script>

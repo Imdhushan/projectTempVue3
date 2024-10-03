@@ -7,6 +7,7 @@ const router = createRouter({
       { path: '/', component: () => import('../components/Home.vue'), meta: { requiresAuth: true} },
       { path: '/temp', component: () => import('../components/Template/Home.vue'), meta: { requiresAuth: true} },
       { path: '/tourismsector/asset', component: () => import('../components/Template/TourismSector/TourismSectorHome.vue'), meta: { requiresAuth: true} },
+      { path: '/data_analysis/tourismsector', component: () => import('../components/Template/DataAnalysis/TourismSectorDataAnalysis.vue'), meta: { requiresAuth: true} },
 
 
       { path: '/sampel-withid/:id',

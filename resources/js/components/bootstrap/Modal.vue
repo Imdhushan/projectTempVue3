@@ -11,7 +11,9 @@
           <div class="rounded-top-3 py-3 ps-4 pe-6 bg-body-tertiary">
             <h4 class="mb-1" id="modalExampleDemoLabel">{{ title }}</h4>
           </div>
+          <div class="me-3">
           <slot />
+          </div>
         </div>
       </div>
     </div>
@@ -26,7 +28,7 @@ const props = defineProps({
   title: {
     type: String,
     required: true
-  }
+  },
 });
 
 const detailModal = ref(null);
