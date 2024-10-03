@@ -12,7 +12,7 @@
         </Card>
       </div>
 
-      <div class="col-lg-6 col-md-6 col-sm-6">
+      <div class="col-lg-6 col-md-6 col-sm-6" id="map_div">
         <Card>
           <CardBody>
             <div id="map" class="googlemap" data-theme="AssassianCreed"></div>
@@ -20,10 +20,10 @@
         </Card>
       </div>
 
-      <div class="col-lg-3 col-md-3 col-sm-3">
+      <div class="col-lg-3 col-md-3 col-sm-3 " id="news_div">
         <Card>
           <CardBody>
-            <div class="scrollable-div">
+            <div class="scrollable-div news">
               <Card v-for="(card, index) in cards" :key="index">
                 <CardBody>
                   <CardNews
@@ -205,7 +205,7 @@ const cards = [
     imageAlt: "Blue Investment",
     title: "Blue Investment Project",
     text: "Ready to make waves with your next investment? Introducing Blue Investment, our latest project nestled in the heart of Sri Lanka's stunning coastline.",
-    modelText: [
+    modelText:[
       "Ready to make waves with your next investment? Introducing Blue Investment, our latest project nestled in the heart of Sri Lanka's stunning coastline.",
       "Your investment here isn't just buying property; it's securing a future of endless possibilities.",
       "With breathtaking views and premium amenities, this project offers a unique opportunity to invest in your future.",
@@ -214,7 +214,39 @@ const cards = [
     linkText: "Read More",
     linkHref: "#!"
   },
-  // Other cards...
+  {
+    "imageSrc": "/assets/img/generic/investment2.jpg",
+    "imageAlt": "Diving Investment",
+    "title": "Invest in Underwater Exploration",
+    "text": "Dive into a world of vibrant marine life and unparalleled beauty. Discover the opportunities of investing in Sri Lanka’s rich underwater ecosystems with Blue Investment.",
+    modelText:[
+      "Dive into a world of vibrant marine life and unparalleled beauty. Discover the opportunities of investing in Sri Lanka’s rich underwater ecosystems with Blue Investment.",
+      "Imagine waking up to the soothing sound of waves and the sight of pristine beaches every day.",
+      "By investing in Blue Investment, you're not just investing in land; you're becoming a part of a sustainable future for both the environment and local communities.",
+      "We prioritize eco-friendly practices and work with local stakeholders to ensure that development is beneficial to all.",
+      "Explore the potential of our marine resources, where sustainable practices lead to a prosperous future.",
+      "Your investment will contribute to conservation efforts, protecting our rich biodiversity for generations to come."
+
+    ],
+    "linkText": "Read More",
+    "linkHref": "#!"
+  },
+  {
+    "imageSrc": "/assets/img/generic/investment3.jpg",
+    "imageAlt": "Smart Investment",
+    "title": "Capitalizing on Coastal Growth",
+    "text": "Sri Lanka is a booming hotspot for investors. Join the wave and invest in prime land that offers endless possibilities for tourism and growth.",
+    modelText: [
+      "Sri Lanka is a booming hotspot for investors. Join the wave and invest in prime land that offers endless possibilities for tourism and growth.",
+      "The country's rich culture and diverse landscapes create a unique blend that attracts tourists from around the world.",
+      "Imagine a place where pristine beaches meet lush greenery, creating the perfect backdrop for your investment.",
+      "With government support and increasing infrastructure development, there has never been a better time to invest.",
+      "By choosing Blue Investment, you're not just buying land; you're becoming part of a growing community focused on sustainable tourism and economic growth.",
+      "Seize this opportunity to be part of Sri Lanka's economic transformation and enjoy the benefits of a lucrative investment."
+    ],
+    "linkText": "Read More",
+    "linkHref": "#!"
+  }
 ];
 
 // Sample data for selects
@@ -283,6 +315,9 @@ const processSelection = () => {
 .googlemap {
   height: 400px;
   width: 100%;
+}
+.news {
+  height: 400px;
 }
 
 .scrollable-div {
